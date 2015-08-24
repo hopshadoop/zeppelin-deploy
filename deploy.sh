@@ -2,6 +2,7 @@
 
 if [ $# -ne 1 ] ; then
  echo "usage: $0 zeppelin-version"
+ echo "example: $0 zeppelin-0.5.0-incubating"
  exit 1
 fi
 
