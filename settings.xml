@@ -1,0 +1,24 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<servers>
+		 <server>
+		      <id>sics-snapshot-repository</id>
+		      <username>root</username>
+		      <filePermissions>664</filePermissions>
+		      <directoryPermissions>775</directoryPermissions>
+		      <privateKey>/home//.ssh/id_rsa</privateKey>
+		      <configuration></configuration>
+		 </server>
+		 <server>
+		      <id>sics-release-repository</id>
+		      <username>root</username>
+		      <filePermissions>664</filePermissions>
+		      <directoryPermissions>775</directoryPermissions>
+		      <privateKey>/home//.ssh/id_rsa</privateKey>
+		      <configuration></configuration>
+		 </server>
+	</servers>
+
+</settings> 
