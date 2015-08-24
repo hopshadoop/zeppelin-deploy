@@ -8,7 +8,7 @@
 		      <username>root</username>
 		      <filePermissions>664</filePermissions>
 		      <directoryPermissions>775</directoryPermissions>
-		      <privateKey>/home//.ssh/id_rsa</privateKey>
+		      <privateKey>/home/ /.ssh/id_rsa</privateKey>
 		      <configuration></configuration>
 		 </server>
 		 <server>
@@ -16,7 +16,7 @@
 		      <username>root</username>
 		      <filePermissions>664</filePermissions>
 		      <directoryPermissions>775</directoryPermissions>
-		      <privateKey>/home//.ssh/id_rsa</privateKey>
+		      <privateKey>/home/ /.ssh/id_rsa</privateKey>
 		      <configuration></configuration>
 		 </server>
 	</servers>
