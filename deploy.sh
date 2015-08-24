@@ -10,7 +10,7 @@ fi
 version=$1
 mvn  deploy:deploy-file -Durl=scpexe://kompics.i.sics.se/home/maven/repository \
                        -DrepositoryId=sics-release-repository \
-                       -Dfile=./zeppelin/zeppelin-web-$version.war \
+                       -Dfile=./zeppelin-web-$version.war \
                        -DgroupId=org.apache.zeppelin \
                        -DartifactId=zeppelin-web \
                        -Dversion=$version \
