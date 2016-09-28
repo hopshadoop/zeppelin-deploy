@@ -4,9 +4,9 @@
    <modelVersion>4.0.0</modelVersion>
 
    <groupId>org.apache.zeppelin</groupId>
-   <artifactId>zeppelin-web</artifactId>
-   <version>0.5.0-incubating</version>
-   <packaging>war</packaging>
+   <artifactId>##artifactId##</artifactId>
+   <version>##version##</version>
+   <packaging>##packaging##</packaging>
 
    <name>Apache Zeppelin</name>
    <url>http://kompics.sics.se</url>
