@@ -5,7 +5,8 @@
 1.  Copy settings.xml to ~/.m2 
 2.  Clone zeppelin
 3.  cd deploy-zeppelin/zeppelin-kompics-install-jar
-4.  run ./mvn-deploy-zeppelin.sh <path-to-zeppelin> <version>
+4.  Apply the patch 'sisu.patch' on the zepplin project. See 'apply-patch.sh' for how to do that. 
+5.  run ./mvn-deploy-zeppelin.sh <path-to-zeppelin> <version>
 
 This will build zeppelin and copy the distribution tar to snurran.sics.se. Then add  zeppelin-interpreter.jar, zeppelin-zengine.jar, and zeppelin-web.war to 
 kompics snapshot or release repository depending on the version of zeppelin. 
