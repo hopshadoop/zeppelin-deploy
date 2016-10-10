@@ -4,28 +4,6 @@
 
 1.  Copy settings.xml to ~/.m2 
 2.  Clone zeppelin
-and add exclusions for **sisu-inject-plexus** and **sisu-inject-bean**
-```xml
-    <dependency>
-      <groupId>org.sonatype.aether</groupId>
-      <artifactId>aether-connector-wagon</artifactId>
-      <version>1.12</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.maven.wagon</groupId>
-          <artifactId>wagon-provider-api</artifactId>
-        </exclusion>
-	<exclusion>
-          <groupId>org.sonatype.sisu</groupId>
-          <artifactId>sisu-inject-plexus</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.sonatype.sisu</groupId>
-          <artifactId>sisu-inject-bean</artifactId>
-        </exclusion>   
-      </exclusions>
-    </dependency>
-```
 3.  cd deploy-zeppelin/zeppelin-kompics-install-jar
 4.  Apply the patch 'sisu.patch' on the zepplin project. See 'apply-patch.sh' for how to do that. 
 5.  run ./mvn-deploy-zeppelin.sh <path-to-zeppelin> <version>
