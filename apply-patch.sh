@@ -1,5 +1,12 @@
 #!/bin/bash
+if [ $# -ne 1 ] ; then
+ echo "usage: $0 path-to-zeppelin"
+ exit 1
+fi
 
-cd ../zeppelin
-cp ../deploy-zeppelin/sisu.patch .
-patch <  sisu.patch
+ZEPPELIN_DIR=$1
+
+cd $ZEPPELIN_DIR/zeppelin-interpreter
+
+patch <  ../../deploy-zeppelin/sisu.patch
+
