@@ -15,10 +15,12 @@ version=$2
 
 cd $ZEPPELIN_DIR
 
-./dev/change_scala_version.sh 2.11
-mvn clean package -Pbuild-distr -Pspark-2.0 -Phadoop-2.4 -Pyarn -Ppyspark -Psparkr -Pscala-2.11
+#export MAVEN_OPTS="-Xmx756m -XX:MaxPermSize=2048m"
 
-scp zeppelin-distribution/target/zeppelin-${version}.tar.gz glassfish@snurran.sics.se:/var/www/hops/zeppelin-${version}-bin-spark-2.0.1_hadoop-2.4.tar.gz
+./dev/change_scala_version.sh 2.11
+mvn clean package -Pbuild-distr -Pspark-2.1 -Phadoop-2.7 -Pyarn -Ppyspark -Psparkr -Pscala-2.11
+
+#scp zeppelin-distribution/target/zeppelin-${version}.tar.gz glassfish@snurran.sics.se:/var/www/hops/zeppelin-${version}-bin-spark-2.0.1_hadoop-2.4.tar.gz
 
 cd $dir
 ./mvn-install-pom.sh $ZEPPELIN_DIR zeppelin $version pom
