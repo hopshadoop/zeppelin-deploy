@@ -14,3 +14,4 @@ patch <  ../../zeppelin-deploy/sisu.patch
 cd ../zeppelin-web/src/components/baseUrl
 
 patch <  $ZEPPELIN_DEPLOY/js.patch
+
