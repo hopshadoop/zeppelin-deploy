@@ -4,7 +4,7 @@
 
 1.  Copy settings.xml to ~/.m2 
 2.  Clone zeppelin
-3.  cd deploy-zeppelin/zeppelin-kompics-install-jar
+3.  cd zeppelin-deploy/zeppelin-kompics-install-jar
 4.  Apply the patch 'sisu.patch' on the zepplin project. See 'apply-patch.sh' for how to do that. 
 5.  run ./mvn-deploy-zeppelin.sh <path-to-zeppelin> <version>
 
