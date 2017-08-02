@@ -1,34 +1,42 @@
-diff --git a/zeppelin-web/src/components/baseUrl/baseUrl.service.js b/zeppelin-web/src/components/baseUrl/baseUrl.service.js
-index fb2ecfb..b6aae44 100644
---- a/zeppelin-web/src/components/baseUrl/baseUrl.service.js
-+++ b/zeppelin-web/src/components/baseUrl/baseUrl.service.js
-@@ -33,13 +33,27 @@ function baseUrlSrv () {
+diff --git a/zeppelin-web/src/components/base-url/base-url.service.js b/zeppelin-web/src/components/base-url/base-url.service.js
+index 6ef55b9..ca51e31 100644
+--- a/zeppelin-web/src/components/base-url/base-url.service.js
++++ b/zeppelin-web/src/components/base-url/base-url.service.js
+@@ -30,18 +30,34 @@ function BaseUrlService() {
+     return port
+   }
+ 
++  const getCookie = function (cname) {
++    let name = cname + '='
++    let ca = document.cookie.split(';')
++    for (let i = 0; i < ca.length; i++) {
++      let c = ca[i]
++      while (c.charAt(0) === ' ') {
++        c = c.substring(1)
++      }
++      if (c.indexOf(name) === 0) {
++        return c.substring(name.length, c.length)
++      }
++    }
++    return ''
++  }
++
    this.getWebsocketUrl = function () {
      let wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:'
      return wsProtocol + '//' + location.hostname + ':' + this.getPort() +
 -      skipTrailingSlash(location.pathname) + '/ws'
-+      '/hopsworks-api/zeppelin/ws/'+getCookie('projectID');
++           '/hopsworks-api/zeppelin/ws/' + getCookie('projectID')
    }
  
-+  var getCookie = function (cname) {
-+    var name = cname + '=';
-+    var ca = document.cookie.split(';');
-+    for (var i = 0; i < ca.length; i++) {
-+      var c = ca[i];
-+      while (c.charAt(0) == ' ') {
-+        c = c.substring(1);
-+      }
-+      if (c.indexOf(name) == 0) {
-+        return c.substring(name.length, c.length);
-+      }
-+    }
-+    return '';
-+  };
-+
-   this.getRestApiBase = function () {
-     return location.protocol + '//' + location.hostname + ':' +
--      this.getPort() + skipTrailingSlash(location.pathname) +
--      '/api'
-+      this.getPort() + '/hopsworks-api/api/zeppelin/' + getCookie('projectID');
+   this.getBase = function() {
+-    return location.protocol + '//' + location.hostname + ':' + this.getPort() + location.pathname
++    return location.protocol + '//' + location.hostname + ':' + this.getPort() +
++           '/hopsworks-api/api/zeppelin/' + getCookie('projectID')
    }
-
+ 
+   this.getRestApiBase = function () {
+-    return skipTrailingSlash(this.getBase()) + '/api'
++    return skipTrailingSlash(this.getBase())
+   }
+ 
+   const skipTrailingSlash = function (path) {

@@ -9,9 +9,9 @@ ZEPPELIN_DEPLOY=$PWD
 
 cd $ZEPPELIN_DIR/zeppelin-interpreter
 
-patch <  ../../zeppelin-deploy/sisu.patch
+patch <  $ZEPPELIN_DEPLOY/patchs/sisu.patch
 
-cd ../zeppelin-web/src/components/baseUrl
+cd $ZEPPELIN_DIR/zeppelin-web/src/components/base-url
 
-patch <  $ZEPPELIN_DEPLOY/js.patch
+patch <  $ZEPPELIN_DEPLOY/patchs/js.patch
 

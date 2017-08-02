@@ -2,7 +2,7 @@
 MINPARAMS=7
 if [ $# -lt "$MINPARAMS" ]
 then
-  echo "usage: $0 <path-to-zeppelin> <artifact-id> <version> <packaging>"
+  echo "usage: $0 <path-to-zeppelin> <groupId> <artifact-id> <version> <packaging> <repository> <repositoryId>"
   exit 1
 fi
   
