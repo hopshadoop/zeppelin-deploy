@@ -16,6 +16,8 @@ repositoryId="$7"
 
 cp $path/pom.xml $path/$artifactId-$version.$packaging
 
+cp ./pom.xml.example ./pom.xml
+
 sed -i -e "s/##groupId##/$groupId/g" ./pom.xml
 sed -i -e "s/##artifactId##/$artifactId/g" ./pom.xml
 sed -i -e "s/##version##/$version/g" ./pom.xml

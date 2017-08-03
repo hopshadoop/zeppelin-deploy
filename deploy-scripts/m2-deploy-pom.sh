@@ -14,11 +14,6 @@ packaging="$5"
 
 cp $path/pom.xml $path/$artifactId-$version.$packaging
 
-sed -i -e "s/##groupId##/$groupId/g" ./pom.xml
-sed -i -e "s/##artifactId##/$artifactId/g" ./pom.xml
-sed -i -e "s/##version##/$version/g" ./pom.xml
-sed -i -e "s/##packaging##/$packaging/g" ./pom.xml
-
 mvn install:install-file \
    -Dfile=$path/$artifactId-$version.$packaging \
    -DgroupId=$groupId \
