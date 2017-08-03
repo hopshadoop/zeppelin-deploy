@@ -7,5 +7,4 @@
 3.  Update hadoop and spark versions in deploy.sh if necessary.
 4.  `./deploy.sh <path-to-zeppelin> <zeppelin-version> [local|kompics]`
 
-This will build zeppelin and copy the distribution tar to snurran.sics.se. Then add zeppelin-interpreter.jar, zeppelin-zengine.jar, and zeppelin-web.war to 
-kompics repository.
+This will build zeppelin and copy the distribution tar to snurran.sics.se. Then add zeppelin-interpreter.jar, zeppelin-zengine.jar, and zeppelin-web.war to [local|kompics] repository.
